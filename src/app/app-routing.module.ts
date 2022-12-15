@@ -15,6 +15,7 @@ const routes: Routes = [
     path: 'regions',
     loadChildren: () => import('./regions/regions.module').then( m => m.RegionsPageModule)
   },
+ 
 ];
 
 @NgModule({
