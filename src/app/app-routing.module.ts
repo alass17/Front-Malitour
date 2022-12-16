@@ -8,12 +8,20 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'details-region',
     pathMatch: 'full'
   },
   {
     path: 'regions',
     loadChildren: () => import('./regions/regions.module').then( m => m.RegionsPageModule)
+  },
+  {
+    path: 'ajouter',
+    loadChildren: () => import('./ajouter/ajouter.module').then( m => m.AjouterPageModule)
+  },
+  {
+    path: 'details-region',
+    loadChildren: () => import('./details-region/details-region.module').then( m => m.DetailsRegionPageModule)
   },
  
 ];

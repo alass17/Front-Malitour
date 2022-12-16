@@ -181,3 +181,7 @@ img{
 ion-menu {
   width: 305px;
 }
+
+ion-item:hover {
+  --color-hover: #368E8C !important;
+}
