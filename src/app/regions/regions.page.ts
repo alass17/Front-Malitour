@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RegionService } from '../services/region.service';
 
 @Component({
   selector: 'app-regions',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./regions.page.scss'],
 })
 export class RegionsPage implements OnInit {
-
-  constructor() { }
+ regions:any;
+  constructor(private service:RegionService) { }
 
   ngOnInit() {
+    this.service.getAllRegion().subscribe(data =>{
+       this.regions=data;
+    });
+
   }
 
 }

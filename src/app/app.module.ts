@@ -18,10 +18,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule} from '@angular/material/card';
 import { MatGridListModule} from '@angular/material/grid-list';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { httpInterceptorProviders } from './helpers/http.interceptor.service';
+
+
 
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,],
   imports: [
     BrowserModule, 
     IonicModule.forRoot(),
@@ -34,8 +39,10 @@ import { MatGridListModule} from '@angular/material/grid-list';
      MatDividerModule,
      MatCardModule,
      MatGridListModule,
+     HttpClientModule,
+     FormsModule,
   ],
-  providers: [],
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
